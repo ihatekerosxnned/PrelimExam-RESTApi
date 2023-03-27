@@ -1,0 +1,139 @@
+###Post Users
+POST http://localhost:8080/users
+content-type: application/json
+
+{
+    "username":"sewer",
+    "password":"person",
+    "fullname":"FJ Austin Buenaflor",
+    "gender":"Male",
+    "address":"Alijis"
+    
+
+}
+###Login the User
+POST http://localhost:8080/users/login
+Content-Type: application/json
+
+{
+    "username":"user1",
+    "password":"password1"
+}
+###GET Using Search?=q 
+GET http://localhost:8080/users/search?q=brandnewnumb
+###GET Using /users
+GET http://localhost:8080/users
+###GET Using /lookup searching all with same letters
+GET http://localhost:8080/users/lookup/new
+###UPDATE USER
+PATCH http://localhost:8080/users/63fe569d690147949da9215a
+content-type: application/json
+
+{
+    "password":"dragon",
+    "fullname":"FJ Austin Buenaflor",
+    "gender":"Male",
+    "address":"Alijis"   
+}
+
+###Delete by ID
+DELETE http://localhost:8080/users/delete/63fc4ee4b758acb858675fd2
+
+###Riders
+###Post Users
+POST http://localhost:8080/riders
+content-type: application/json
+
+{
+    "first_name":"dummy2",
+    "last_name":"dummy2",
+    "gender":"Bot",
+    "age":"18"
+
+}
+###GET Using Search?=q 
+GET http://localhost:8080/riders/search?q=dummy1
+###GET Using /users
+GET http://localhost:8080/riders
+###GET Using /lookup searching all with same letters
+GET http://localhost:8080/riders/lookup/D
+
+###Delete by ID
+DELETE http://localhost:8080/riders+/delete/63fc4ee4b758acb858675fd2
+
+###Restaurant
+###Post Restaurants
+POST http://localhost:8080/restaurants
+content-type: application/json
+
+{
+    "name":"Sisig House",
+    "location":"Qatar Qatarantadohan",
+    "owner_name":"Ha"
+
+}
+###GET Using Search?=q 
+GET http://localhost:8080/restaurants/search?q=Sisig%20House
+###GET Using /users
+GET http://localhost:8080/restaurants
+###GET Using /lookup searching all with same letters
+GET http://localhost:8080/restaurants/lookup/H
+
+###Delete by ID
+DELETE http://localhost:8080/restaurants+/delete/63fc4ee4b758acb858675fd2
+
+###Menus
+###Post Menus
+POST http://localhost:8080/menus
+content-type: application/json
+
+{
+    "restaurantid":"63fc59a9d20a7315103e38db",
+    "prodname":"Sisig w/ Balls",
+    "description":"Its a sisig in the bowl",
+    "category":"Pork",
+    "amount":"150"
+}
+###GET Using Search?=q 
+GET http://localhost:8080/menus/search?q=Bofish
+###GET Using /users
+GET http://localhost:8080/menus
+###GET Using /lookup searching all with same letters
+GET http://localhost:8080/menus/lookup/F
+
+###Delete by ID
+DELETE http://localhost:8080/menus+/delete/63fc4ee4b758acb858675fd2
+
+###Post Transactions
+POST http://localhost:8080/transactions
+content-type: application/json
+
+{
+    "userid":"63fe569d690147949da9215a",
+    "riderid":"63fe5b3ff3a209047344932f",
+    "restaurantid":"63fe5b50f3a2090473449336  ",
+    "menuid":"Sisig",
+    "total":"150"
+    
+
+}
+###GET Using Search?=q 
+GET http://localhost:8080/transactions/search?q=63fe569d690147949da92169
+###GET Using /users
+GET http://localhost:8080/transactions
+###GET Using /lookup searching all with same letters
+GET http://localhost:8080/transactions/lookup/new
+###UPDATE USER
+PATCH http://localhost:8080/transactions/63fe5b88f3a2090473449343
+content-type: application/json
+
+{
+    "userid":"halaman",
+    "riderid":"63fe5b3ff3a209047344932f",
+    "restaurantid":"63fe5b50f3a2090473449336  ",
+    "menuid":"Sisig",
+    "total":"150"  
+}
+
+###Delete by ID
+DELETE http://localhost:8080/transactions/delete/63fc4ee4b758acb858675fd2
